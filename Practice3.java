@@ -15,7 +15,6 @@ public class Practice3 {
         for (int i = 0; i<enterCodes.size();i++){
             codeUpdater(enterCodes.get(i));
         }
-
     }
     public static void codeUpdater(String code){
         ArrayList <Integer> Numbers = new ArrayList<>();
@@ -29,17 +28,17 @@ public class Practice3 {
                 int a = i;
                 int num;
                 String numS ="";
-                if (c=='-'){
-                    numS = "-";
-                }
                 if (a+1==code.length()){
                     numS = numS+code.charAt(a);
                     num = Integer.parseInt(numS);
                     Numbers.add(num);
                 }
                 else{
-                    for (a = i+1;!Character.isLetter(code.charAt(a))&&code.charAt(a)!='-';a++){
+                    numS = numS+code.charAt(a);
+                    a = i+1;
+                    while (a<code.length()&&!Character.isLetter(code.charAt(a))&&code.charAt(a)!='-'){
                         numS = numS+code.charAt(a);
+                        a++;
                     }
                     num = Integer.parseInt(numS);
                     Numbers.add(num);
