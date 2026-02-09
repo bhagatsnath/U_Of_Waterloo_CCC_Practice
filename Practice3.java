@@ -54,4 +54,5 @@ public class Practice3 {
         newCode = newCode+sum;
         System.out.println(newCode);
     }
+    //Adding a comment to test the commit
 }
