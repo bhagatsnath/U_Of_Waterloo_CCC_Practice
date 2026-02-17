@@ -15,7 +15,7 @@ public class Pratice11 {
         int fridayAvailableon = 0;
         for (int i =0; i<n;i++){
             String response = sc.next();
-            for (int a =1; a<response.length();a++){
+            for (int a =1; a<=response.length();a++){
                 if (response.charAt(a-1)=='Y'){
                     if (a==1){
                         mondayAvailableon++;
@@ -35,22 +35,33 @@ public class Pratice11 {
                 }
             }
         }
+        ArrayList<Integer> maxDays = new ArrayList<>();
             int preferredDay = Math.max(mondayAvailableon,Math.max(tuesdayAvailableon,Math.max(wednesdayAvailableon,Math.max(thursdayAvailableon,fridayAvailableon))));
             if (preferredDay==mondayAvailableon){
-                System.out.println(1);
+                maxDays.add(1);
             }
-            else if (preferredDay==tuesdayAvailableon){
-                System.out.println(2);
+            if (preferredDay==tuesdayAvailableon){
+                maxDays.add(2);
             }
-            else if (preferredDay==wednesdayAvailableon){
-                System.out.println(3);
+            if (preferredDay==wednesdayAvailableon){
+                maxDays.add(3);
             }
-            else if (preferredDay==thursdayAvailableon){
-                System.out.println(4);
+            if (preferredDay==thursdayAvailableon){
+                maxDays.add(4);
             }
-            else if (preferredDay==fridayAvailableon){
-                System.out.println(5);
+            if (preferredDay==fridayAvailableon){
+                maxDays.add(5);
             }
-        
+            print(maxDays);
+    }
+    public static void print(ArrayList<Integer> maxDays){
+        for (int i =0; i<maxDays.size();i++){
+            if (i!=maxDays.size()-1){
+                System.out.print(maxDays.get(i)+",");
+            }
+            else{
+                System.out.print(maxDays.get(i));
+            }
+        }
     }
 }
