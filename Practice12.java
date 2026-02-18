@@ -1,7 +1,7 @@
 /**
  * Author: Bhagat Sabari Nath
  * Date: Feb 17, 2026
- * Question 4 of 2023
+ * Question 4 of 2023 1st attempt
  */
 import java.util.*;
 public class Practice12 {
