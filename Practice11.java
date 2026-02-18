@@ -4,7 +4,7 @@
  * Question 3 of 2023
  */
 import java.util.*;
-public class Pratice11 {
+public class Practice11 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
